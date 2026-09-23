@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 6
+@export var SPEED = 5.0
+@export var JUMP_VELOCITY = 6
 
 var mouseCaptured := false
 
+@onready var camera: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 
 var yaw = 0.0

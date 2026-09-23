@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cdlu7ulb0wkfa"]
+
+[ext_resource type="Script" uid="uid://dsqe5fpuobcu3" path="res://scenes/portal_script.gd" id="1_v0xau"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tdbmw"]
+top_radius = 1.3974609
+bottom_radius = 1.3974609
+height = 3.102539
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0ekuu"]
+top_radius = 0.0
+bottom_radius = 0.1
+height = 0.3
+
+[node name="Portal" type="Node3D" unique_id=2134881050]
+script = ExtResource("1_v0xau")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1734428434]
+layers = 64
+size = Vector3(7.0585938, 9.097656, 0.037841797)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=247823545]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.05303221, 0.34419242)
+visible = false
+mesh = SubResource("CylinderMesh_tdbmw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=845085497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5877512)
+cull_mask = 1048511
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=334730615]
+transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, 5, 0, -5, -2.1855695e-07, 0, 0, 0)
+mesh = SubResource("CylinderMesh_0ekuu")
