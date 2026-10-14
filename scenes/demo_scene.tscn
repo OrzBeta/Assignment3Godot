@@ -44,10 +44,6 @@ environment = SubResource("Environment_0ekuu")
 transform = Transform3D(100, 0, 0, 0, 10, 0, 0, 0, 100, -4.182214, -3.4564946, 0.86351395)
 use_collision = true
 
-[node name="Player" parent="." unique_id=1778293993 instance=ExtResource("1_03k34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 7.633486, -22.650822)
-SPEED = 10.0
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1749651984]
 transform = Transform3D(-0.99929166, -8.7805124e-11, -0.037631776, -0.023134256, 0.7887195, 0.61431783, 0.029680913, 0.61475325, -0.7881609, 0, 44.878567, 0)
 shadow_enabled = true
@@ -55,6 +51,10 @@ shadow_enabled = true
 [node name="SpotLight3D" type="SpotLight3D" parent="DirectionalLight3D" unique_id=1240470040]
 transform = Transform3D(1, 5.9604645e-08, 8.940697e-08, -5.9604645e-08, 0.9999999, -2.9802322e-08, -1.1920929e-07, -2.9802322e-08, 1, -13.878678, 38.198875, 20.496601)
 visible = false
+
+[node name="Player" parent="." unique_id=1159455983 instance=ExtResource("1_03k34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 5.4760113, -22.650822)
+SPEED = 10.0
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=2002218373]
 transform = Transform3D(0.57603765, 0, 0.81742316, 0, 1, 0, -0.81742316, 0, 0.57603765, -15.523447, 5.28899, -34.19072)
@@ -91,6 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.57835, 4.5779333, -36.260
 otherPortal = NodePath("../Portal")
 
 [node name="Control" type="Control" parent="." unique_id=371364346]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

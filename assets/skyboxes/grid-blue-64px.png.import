@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsv1770uxoo3t"
-path.s3tc="res://.godot/imported/grid-yellow-64px.png-2859bfd8b078673701f57afbe7f97c32.s3tc.ctex"
+uid="uid://75mt1poymuw1"
+path.s3tc="res://.godot/imported/grid-blue-64px.png-cb4e9a30788f75b4604d728f2193effd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/grid-yellow-64px.png"
-dest_files=["res://.godot/imported/grid-yellow-64px.png-2859bfd8b078673701f57afbe7f97c32.s3tc.ctex"]
+source_file="res://assets/skyboxes/grid-blue-64px.png"
+dest_files=["res://.godot/imported/grid-blue-64px.png-cb4e9a30788f75b4604d728f2193effd.s3tc.ctex"]
 
 [params]
 

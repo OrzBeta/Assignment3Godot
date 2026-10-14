@@ -12,6 +12,9 @@ top_radius = 0.0
 bottom_radius = 0.1
 height = 0.3
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdbmw"]
+size = Vector3(7.181885, 9.153778, 1.9067383)
+
 [node name="Portal" type="Node3D" unique_id=2134881050]
 script = ExtResource("1_v0xau")
 
@@ -21,7 +24,6 @@ size = Vector3(7.0585938, 9.097656, 0.037841797)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=247823545]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.05303221, 0.34419242)
-visible = false
 mesh = SubResource("CylinderMesh_tdbmw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=845085497]
@@ -31,3 +33,19 @@ cull_mask = 1048511
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=334730615]
 transform = Transform3D(5, 0, 0, 0, -2.1855695e-07, 5, 0, -5, -2.1855695e-07, 0, 0, 0)
 mesh = SubResource("CylinderMesh_0ekuu")
+
+[node name="Collision1" type="Area3D" parent="." unique_id=1956683732]
+
+[node name="TeleportArea1" type="CollisionShape3D" parent="Collision1" unique_id=866298866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.95470786)
+shape = SubResource("BoxShape3D_tdbmw")
+debug_color = Color(5.7756904e-07, 0.6201559, 0.57138103, 0.41960785)
+
+[node name="Collision2" type="Area3D" parent="." unique_id=2059155520]
+
+[node name="TeleportArea2" type="CollisionShape3D" parent="Collision2" unique_id=1291186588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.97509813)
+shape = SubResource("BoxShape3D_tdbmw")
+debug_color = Color(5.7756904e-07, 0.6201559, 0.57138103, 0.41960785)
+
+[connection signal="body_entered" from="Collision1" to="." method="_on_body_entered"]

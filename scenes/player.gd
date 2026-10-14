@@ -8,9 +8,15 @@ var mouseCaptured := false
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 
+#@onready var collision_1: Area3D = $Collision1
+#@onready var collision_2: Area3D = $Collision2
+
 var yaw = 0.0
 var pitch = 0.0
 
+func _ready() -> void:
+	pass
+	
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseMotion:
@@ -54,3 +60,4 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	

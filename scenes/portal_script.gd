@@ -30,7 +30,13 @@ func _getPlayerCamera() -> void:
 	### use these to control the other camera
 	var camPosition = cam.global_position
 	var camRotation = cam.global_rotation
-	
 	otherPortal.global_position = self.global_position - camPosition
-	
 	return
+
+
+func _on_body_entered(player: Node3D) -> void:
+	# teleport player to other portal
+	#
+	if otherPortal:
+		#player.position += otherPortal.global_position
+		print("TELEPORT!")
