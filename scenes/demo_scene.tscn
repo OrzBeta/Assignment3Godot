@@ -41,7 +41,7 @@ script = ExtResource("1_0ekuu")
 environment = SubResource("Environment_0ekuu")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=634384518]
-transform = Transform3D(100, 0, 0, 0, 10, 0, 0, 0, 100, -4.182214, -3.4564946, 0.86351395)
+transform = Transform3D(100, 0, 0, 0, 10, 0, 0, 0, 100, -4.182214, -5.251502, 0.86351395)
 use_collision = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1749651984]
@@ -83,11 +83,11 @@ height = 2.078125
 sides = 32
 
 [node name="Portal" parent="." unique_id=2134881050 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(0.57603765, 0, 0.81742316, 0, 1, 0, -0.81742316, 0, 0.57603765, -15.375287, 4.4491863, -34.054585)
+transform = Transform3D(-0.5823738, 0, -0.8129211, 0, 1, 0, 0.8129211, 0, -0.5823738, -15.375287, 4.4491863, -34.054585)
 otherPortal = NodePath("../Portal2")
 
 [node name="Portal2" parent="." unique_id=1199124635 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.57835, 4.5779333, -36.260853)
+transform = Transform3D(-0.9997539, 0, -0.022183299, 0, 1, 0, 0.022183299, 0, -0.9997539, -30.57835, 4.5779333, -36.260853)
 otherPortal = NodePath("../Portal")
 
 [node name="Control" type="Control" parent="." unique_id=371364346]

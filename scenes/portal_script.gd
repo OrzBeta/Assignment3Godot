@@ -34,9 +34,26 @@ func _getPlayerCamera() -> void:
 	return
 
 
-func _on_body_entered(player: Node3D) -> void:
+func _on_body_entered(player: Node3D) -> void:	
 	# teleport player to other portal
-	#
+	#any affect to player position breaks game
+	#if otherPortal:
+		#player.global_position = otherPortal.global_position
+		#print("TELEPORT!")
+		
+	# check front or back of collider
+	var dif = player.global_position - self.global_position
+	
 	if otherPortal:
-		#player.position += otherPortal.global_position
-		print("TELEPORT!")
+		if player.global_position.z > self.global_position.z:
+			player.global_position = otherPortal.global_position - dif
+			return
+		if player.global_position.z < self.global_position.z:
+			player.global_position = otherPortal.global_position - dif
+			return
+		
+
+
+func _on_collision_1_body_exited(player: Node3D) -> void:
+	player.global_position = otherPortal.global_position
+	pass # Replace with function body.
