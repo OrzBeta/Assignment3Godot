@@ -43,17 +43,20 @@ func _on_body_entered(player: Node3D) -> void:
 		
 	# check front or back of collider
 	var dif = player.global_position - self.global_position
-	
+
+	##keep player y constant
 	if otherPortal:
-		if player.global_position.z > self.global_position.z:
-			player.global_position = otherPortal.global_position - dif
-			return
-		if player.global_position.z < self.global_position.z:
-			player.global_position = otherPortal.global_position - dif
-			return
+		player.global_position = otherPortal.global_position + Vector3(0,-5,0)
+		return
+		#if player.global_position.z > self.global_position.z:
+			#player.global_position = otherPortal.global_position - dif
+			#return
+		#if player.global_position.z < self.global_position.z:
+			#player.global_position = otherPortal.global_position - dif
+			#return
 		
 
 
-func _on_collision_1_body_exited(player: Node3D) -> void:
-	player.global_position = otherPortal.global_position
-	pass # Replace with function body.
+#func _on_collision_1_body_exited(player: Node3D) -> void:
+	#player.global_position = otherPortal.global_position
+	#pass # Replace with function body.

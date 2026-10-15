@@ -53,42 +53,42 @@ transform = Transform3D(1, 5.9604645e-08, 8.940697e-08, -5.9604645e-08, 0.999999
 visible = false
 
 [node name="Player" parent="." unique_id=1159455983 instance=ExtResource("1_03k34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 5.4760113, -22.650822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 15.191358, -22.650822)
 SPEED = 10.0
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=2002218373]
-transform = Transform3D(0.57603765, 0, 0.81742316, 0, 1, 0, -0.81742316, 0, 0.57603765, -15.523447, 5.28899, -34.19072)
-size = Vector3(12, 7, 2)
-material = SubResource("StandardMaterial3D_8m1ix")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D2" unique_id=1310397110]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.5, 0.032814026)
-operation = 2
-radius = 3.3
-height = 2.078125
-sides = 32
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2136476266]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -27.325891, 6.3459005, -52.61899)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1794118121]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.646, 5.28899, -36.08)
-size = Vector3(12, 7, 2)
+[node name="Portal" parent="." unique_id=2134881050 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
+transform = Transform3D(-0.9999999, 0, 8.742276e-08, -8.74103e-08, -0.016885476, -0.9998573, 1.476175e-09, -0.9998574, 0.016885474, -30.004944, 21.969774, -26.205246)
+otherPortal = NodePath("../Portal2")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D4" unique_id=1977435412]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Portal" unique_id=2002218373]
+transform = Transform3D(-0.9999698, 0, -0.007772684, 0, 1, 0, 0.007772684, 0, -0.9999698, -0.19039536, 0.8398037, 0.55895996)
+size = Vector3(12, 7, 2)
+material = SubResource("StandardMaterial3D_8m1ix")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Portal/CSGBox3D2" unique_id=1310397110]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.5, 0.032814026)
 operation = 2
 radius = 3.3
 height = 2.078125
 sides = 32
 
-[node name="Portal" parent="." unique_id=2134881050 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(-0.5823738, 0, -0.8129211, 0, 1, 0, 0.8129211, 0, -0.5823738, -15.375287, 4.4491863, -34.054585)
-otherPortal = NodePath("../Portal2")
-
 [node name="Portal2" parent="." unique_id=1199124635 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(-0.9997539, 0, -0.022183299, 0, 1, 0, 0.022183299, 0, -0.9997539, -30.57835, 4.5779333, -36.260853)
+transform = Transform3D(-1.0000001, 0, 8.742279e-08, -8.6455415e-08, 0.14835286, -0.98893464, -1.2969421e-08, -0.9889345, -0.14835288, -30.57835, 4.5779333, -23.652735)
 otherPortal = NodePath("../Portal")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Portal2" unique_id=1794118121]
+transform = Transform3D(-0.9999999, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999999, 0.06764984, 0.7110567, 0.5300598)
+size = Vector3(12, 7, 2)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Portal2/CSGBox3D4" unique_id=1977435412]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.5, 0.032814026)
+operation = 2
+radius = 3.3
+height = 2.078125
+sides = 32
 
 [node name="Control" type="Control" parent="." unique_id=371364346]
 visible = false
