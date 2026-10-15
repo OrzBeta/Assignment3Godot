@@ -2,7 +2,10 @@ extends CharacterBody3D
 
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 6
-@export var GravityConstant = 9.81
+#@export var GravityConstant = 9.81
+
+##instead, try using terminal velocity
+@export var Terminal_Velocity = 40
 
 
 var mouseCaptured := false
@@ -45,8 +48,10 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		#velocity += get_gravity() * delta
-		velocity.y = -GravityConstant
+		if velocity.y >= -40:
+			velocity += get_gravity() * delta
+
+		#velocity.y = -GravityConstant
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
