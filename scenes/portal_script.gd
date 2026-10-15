@@ -46,7 +46,7 @@ func _on_body_entered(player: Node3D) -> void:
 
 	##keep player y constant
 	if otherPortal:
-		player.global_position = otherPortal.global_position + Vector3(0,-5,0)
+		player.global_position = otherPortal.global_position + dif + Vector3(0,-5,0)
 		return
 		#if player.global_position.z > self.global_position.z:
 			#player.global_position = otherPortal.global_position - dif
