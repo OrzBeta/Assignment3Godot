@@ -53,14 +53,14 @@ transform = Transform3D(1, 5.9604645e-08, 8.940697e-08, -5.9604645e-08, 0.999999
 visible = false
 
 [node name="Player" parent="." unique_id=1159455983 instance=ExtResource("1_03k34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 15.191358, -22.650822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.137207, 44.096645, -22.650822)
 SPEED = 10.0
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2136476266]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -27.325891, 6.3459005, -52.61899)
 
 [node name="Portal" parent="." unique_id=2134881050 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(-0.9999999, 0, 8.742276e-08, -8.74103e-08, -0.016885476, -0.9998573, 1.476175e-09, -0.9998574, 0.016885474, -30.004944, 53.90036, -26.205246)
+transform = Transform3D(-0.9999999, 0, 8.742276e-08, -8.74103e-08, -0.016885476, -0.9998573, 1.476175e-09, -0.9998574, 0.016885474, -30.004944, 5.070898, -26.205246)
 otherPortal = NodePath("../Portal2")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Portal" unique_id=2002218373]
@@ -76,7 +76,7 @@ height = 2.078125
 sides = 32
 
 [node name="Portal2" parent="." unique_id=1199124635 node_paths=PackedStringArray("otherPortal") instance=ExtResource("2_ba4t3")]
-transform = Transform3D(-1.0000001, -1.0541105e-15, 8.74228e-08, 4.726865e-09, 0.99853724, 0.05406888, -8.7294914e-08, 0.054068886, -0.99853736, -29.992199, 4.5779333, -26.363684)
+transform = Transform3D(-1.0000001, -1.0541105e-15, 8.74228e-08, 4.726865e-09, 0.99853724, 0.05406888, -8.7294914e-08, 0.054068886, -0.99853736, -29.992199, 36.3626, -8.552805)
 otherPortal = NodePath("../Portal")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Portal2" unique_id=1794118121]
